@@ -1,64 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-h1 {text-align: center;}
-p { font-size: 30px}
+  body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222;
+    background: #fff;
+    margin: 0;
+    padding: 40px 20px;
+  }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  row-gap: 30px
-}
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .header img {
+    width: 180px;
+    height: 216px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .header-text h1 {
+    margin: 0 0 12px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+  .header-text p {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 0 0 12px 0;
+  }
+
+  a {
+    color: #00519c;
+  }
 </style>
-<title>Jia-qi-Huang.github.io</title>
+<title>Jiaqi Huang</title>
 </head>
 <body>
+<div class="container">
 
-<h1>Jiaqi Huang (黄嘉祺)</h1>
+  <div class="header">
+    <img src="photo.jpg" alt="Jiaqi Huang">
+    <div class="header-text">
+      <h1>Jiaqi Huang (黄嘉祺)</h1>
+      <p>PhD Student in Economics<br>
+      Pennsylvania State University<br>
+      Fields: Econometrics</p>
+      <p style="margin-top: 12px;">
+        Email: <a href="mailto:jiaqi.huang@psu.edu">jiaqi.huang@psu.edu</a><br>
+        <a href="https://pennstateoffice365-my.sharepoint.com/:b:/g/personal/jph6716_psu_edu/EcIGrvN2zDBHpqNE7CHBIx8B7wxw3UUw-xp6Wr4Tg00-1A?e=Gbv1Lf">Curriculum Vitae</a>
+      </p>
+    </div>
+  </div>
 
-<div class="grid-container">
+  <h2>Working Papers</h2>
 
-<div>
-<img src="photo.jpg" style="width: 300px; height: 360px;">
-</div>
+  <p>Patrik Guggenberger and Jiaqi Huang. On the numerical approximation of
+  minimax regret rules via fictitious play. <em>arXiv preprint arXiv:2503.10932</em>, 2025.
+  [<a href="https://arxiv.org/pdf/2503.10932">PDF</a>]</p>
 
-<div>
-<p>Welcome to my webpage! I am a PhD student in 
-Economics at Pennsylvannia State University interested in Econometrics. 
-You can contact me at jiaqi.huang@psu.edu 
-<br>
-The link to my CV is <a href="https://pennstateoffice365-my.sharepoint.com/:b:/g/personal/jph6716_psu_edu/EcIGrvN2zDBHpqNE7CHBIx8B7wxw3UUw-xp6Wr4Tg00-1A?e=Gbv1Lf"> here</a>. 
- </p>
-</div>
+  <h2>Publications</h2>
 
-<div>
-<h2>Working Papers </h2>
-</div>
-
-<div>
-<p> Patrik Guggenberger and Jiaqi Huang. On the numerical approximation of
-minimax regret rules via fictitious play. arXiv preprint arXiv:2503.10932, 2025. <a href="https://arxiv.org/pdf/2503.10932"> link </a> 
-</p>
-</div>
-
-<div>
-<h2> Publications </h2>
-</div>
-
-<div>
-<p>
-Feifei Yang, Jiaqi Huang, Xiao Feng, and Miles M Yang. Decision-making in
-a dynamic task: effects of goal orientation on stocks and flows performance.
-Chinese Management Studies, 14(3):695–713, 2020. <a href="https://www.emerald.com/insight/content/doi/10.1108/cms-03-2019-0086/full/html"> link </a>
-</p>
-</div>
-
-
-
+  <p>Feifei Yang, Jiaqi Huang, Xiao Feng, and Miles M Yang. Decision-making in
+  a dynamic task: effects of goal orientation on stocks and flows performance.
+  <em>Chinese Management Studies</em>, 14(3):695–713, 2020.
+  [<a href="https://www.emerald.com/insight/content/doi/10.1108/cms-03-2019-0086/full/html">link</a>]</p>
 
 </div>
-
-
 </body>
 </html>
