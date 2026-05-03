@@ -6,7 +6,7 @@
 <style>
   body {
     font-family: Georgia, serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     color: #222;
     background: #fff;
@@ -59,6 +59,32 @@
   a {
     color: #00519c;
   }
+
+  .paper {
+    margin-bottom: 12px;
+  }
+
+  .paper p {
+    margin-bottom: 4px;
+  }
+
+  .abstract-toggle {
+    text-decoration: none;
+  }
+
+  .abstract-toggle:hover {
+    text-decoration: underline;
+  }
+
+  .abstract {
+    display: none;
+    margin: 6px 0 4px 0;
+    padding: 10px 14px;
+    border-left: 3px solid #ddd;
+    color: #444;
+    font-size: 0.92em;
+    line-height: 1.55;
+  }
 </style>
 <title>Jiaqi Huang</title>
 </head>
@@ -81,17 +107,65 @@
 
   <h2>Working Papers</h2>
 
-  <p>Patrik Guggenberger and Jiaqi Huang. On the numerical approximation of
-  minimax regret rules via fictitious play. <em>arXiv preprint arXiv:2503.10932</em>, 2025.
-  [<a href="https://arxiv.org/pdf/2503.10932">PDF</a>]</p>
+  <div class="paper">
+    <p>Patrik Guggenberger and Jiaqi Huang. On the numerical approximation of
+    minimax regret rules via fictitious play. <em>arXiv preprint arXiv:2503.10932</em>, 2025.
+    [<a href="https://arxiv.org/pdf/2503.10932">PDF</a>]
+    [<a href="#" class="abstract-toggle">abstract</a>]</p>
+    <div class="abstract">Finding numerical approximations to minimax regret treatment rules is of key
+    interest. To do so when potential outcomes are in {0,1} we discretize the action space of nature
+    and apply a variant of Robinson's (1951) algorithm for iterative solutions for finite two-person
+    zero sum games. Our approach avoids the need to evaluate regret of each treatment rule in each
+    iteration. When potential outcomes are in [0,1] we apply the so-called coarsening approach. We
+    consider a policymaker choosing between two treatments after observing data with unequal sample
+    sizes per treatment and the case of testing several innovations against the status quo.</div>
+  </div>
+
+  <div class="paper">
+    <p>Jiaqi Huang. Fixed Effects as Generated Regressors. <em>arXiv preprint arXiv:2602.08899</em>, 2026.
+    [<a href="https://arxiv.org/abs/2602.08899">PDF</a>]
+    [<a href="#" class="abstract-toggle">abstract</a>]</p>
+    <div class="abstract">Many economic models feature moment conditions that involve latent variables.
+    When the latent variables are individual fixed effects in an auxiliary panel data regression, we
+    construct orthogonal moments that eliminate first-order bias induced by estimating the fixed effects.
+    Machine Learning methods and Empirical Bayes methods can be used to improve the estimate of the
+    nuisance parameters in the orthogonal moments. We establish a central limit theorem based on the
+    orthogonal moments without relying on exogeneity assumptions between panel data residuals and the
+    cross-sectional moment functions. In a simulation study where the exogeneity assumption is violated,
+    the estimator based on orthogonal moments has smaller bias compared with other estimators relying on
+    that assumption. An empirical application on experimental site selection demonstrates how the method
+    can be used for nonlinear moment conditions.</div>
+  </div>
 
   <h2>Publications</h2>
 
-  <p>Feifei Yang, Jiaqi Huang, Xiao Feng, and Miles M Yang. Decision-making in
-  a dynamic task: effects of goal orientation on stocks and flows performance.
-  <em>Chinese Management Studies</em>, 14(3):695–713, 2020.
-  [<a href="https://www.emerald.com/insight/content/doi/10.1108/cms-03-2019-0086/full/html">link</a>]</p>
+  <div class="paper">
+    <p>Feifei Yang, Jiaqi Huang, Xiao Feng, and Miles M Yang. Decision-making in
+    a dynamic task: effects of goal orientation on stocks and flows performance.
+    <em>Chinese Management Studies</em>, 14(3):695–713, 2020.
+    [<a href="https://www.emerald.com/insight/content/doi/10.1108/cms-03-2019-0086/full/html">link</a>]
+    [<a href="#" class="abstract-toggle">abstract</a>]</p>
+    <div class="abstract">This paper aims to investigate the effects of goal orientation on understanding the dynamics of stocks and flows (SF).
+      The authors use the well-established department store task as the experimental task to evaluate people’s understanding of SF and implement
+      a survey to assess different goal orientation levels. Ordinary least square is used to test the effects of goal orientations on the SF performance.
+      The findings suggest that learning goal orientation is positively associated with SF performance. However, prove and avoid performance goal 
+      orientation are unrelated to SF performance. The study has important theoretical and practical contributions. From a theoretical perspective, 
+      the authors examine the impact of goal orientation in dynamic decision-making to advance the knowledge on the role of goal orientation. 
+      Practically, the research demonstrates that learning-goal-oriented people perform better in stock and flow tasks, suggesting that goal orientation 
+      is an important trait for recruiting organizational members whose work involves SF decision-making tasks.
+    </div>
+  </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.abstract-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var abstract = this.closest('.paper').querySelector('.abstract');
+      abstract.style.display = abstract.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
 </body>
 </html>
